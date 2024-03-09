@@ -1,0 +1,276 @@
+/* External Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+/* Colors */
+:root {
+  --lightbg: #ffff;
+  --darkbg: black;
+  --txt-color: #bfbfbf;
+  --lit-txt-color: #838181;
+  --primary-color: #44e5ae;
+  --bs-blue: #3a57e8;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #c03221;
+  --bs-orange: #faa938;
+  --bs-yellow: #f16a1b;
+  --bs-green: #1aa053;
+  --bs-teal: #20c997;
+  --bs-cyan: #079aa2;
+  --bs-white: #fff;
+  --bs-gray: #4a4a4f;
+  --bs-gray-dark: #202022;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #bfbfbf;
+  --bs-gray-500: #7c7c83;
+  --bs-gray-600: #4a4a4f;
+  --bs-gray-700: #313135;
+  --bs-gray-800: #202022;
+  --bs-gray-900: #19191a;
+  --bs-primary: #ff971d;
+  --bs-secondary: #4a4a4f;
+  --bs-success: #1aa053;
+  --bs-info: #079aa2;
+  --bs-warning: #f16a1b;
+  --bs-danger: #c03221;
+  --bs-light: #dee2e6;
+  --bs-dark: #19191a;
+  --bs-primary-rgb: 255, 151, 29;
+  --bs-secondary-rgb: 74, 74, 79;
+  --bs-success-rgb: 26, 160, 83;
+  --bs-info-rgb: 7, 154, 162;
+  --bs-warning-rgb: 241, 106, 27;
+  --bs-danger-rgb: 192, 50, 33;
+  --bs-light-rgb: 222, 226, 230;
+  --bs-dark-rgb: 25, 25, 26;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-rgb: 191, 191, 191;
+  --bs-font-sans-serif: "Poppins", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #bfbfbf;
+  --bs-body-bg: #19191a;
+  --color-primary: black;
+  --color-secondary: #2b076e;
+  --color-accent: #44e5ae;
+  --color-accent-hover: #1e448f;
+  --color-white: #ffffff;
+  --color-light-bg-left: #f8f9fb;
+  --color-light-bg-right: #fafbff;
+  --color-grey-7: #fbfcfe;
+  --color-grey-6: #f2f2f2;
+  --color-grey-5: #e0e0e0;
+  --color-grey-4: #bdbdbd;
+  --color-grey-3: #828282;
+  --color-black-10: rgba(255, 255, 255, 0.1);
+  --color-thumb: #1e054d;
+  --color-track: rgb(51, 19, 109);
+  --color-thumb-hover: rgb(26, 9, 58);
+  --color-track-values: 51, 19, 109;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-thumb);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-thumb-hover);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  font-size: 50%;
+  font-family: "Rubik", sans-serif;
+  height: 100%;
+}
+
+body {
+  font-size: 2rem;
+  line-height: 1.5;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+}
+
+img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 4.4rem;
+}
+
+form > .h2 > h2 {
+  font-size: 3.6rem;
+  margin: auto;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+label {
+  display: block;
+  margin-top: 3vh;
+  color: white;
+}
+
+form > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  width: 80%;
+  background-color: inherit;
+  border: none;
+  border-radius: 4px;
+  padding: 1em;
+  /* margin-top: 5px; */
+  color: white;
+  font-size: 1.4rem;
+}
+
+main {
+  width: 80%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+form {
+  width: 100%;
+  height: fit-content;
+  padding: 2em 1em;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.952);
+  box-shadow: -2px 0px 3px rgba(var(--color-track-values), 0.952);
+}
+
+form > div {
+  width: 100%;
+  height: fit-content;
+}
+
+form > div > div {
+  position: relative;
+  padding: 20px;
+  width: fit-content;
+  margin: auto;
+}
+
+.profile-photo-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.profile-photo-container .fa-user {
+  color: rgba(255, 255, 255, 0.07);
+  font-size: 30px;
+  position: absolute;
+}
+
+.profile-photo-container > .fa-cam {
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  width: fit-content;
+  height: fit-content;
+}
+.fa-camera {
+  color: rgba(255, 255, 255, 0.952);
+  font-size: 30px;
+}
+
+.coin-action-button {
+  padding: 1em;
+  background: var(--primary-color);
+  cursor: pointer;
+  margin-top: 6vh;
+  font-weight: 550;
+  transition: 0.13s ease;
+  margin-bottom: 12px;
+  color: black;
+  width: 50%;
+}
+
+.coin-action-button:hover {
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.coin-action-button:active {
+  border: 1px solid white;
+  color: white;
+}
+
+.auth-action {
+  color: white;
+}
+
+.auth-action a {
+  text-decoration: none;
+}
