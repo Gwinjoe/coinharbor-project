@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoinHarbor Capital || Dashboard</title>
+  <link rel="icon" sizes="100x100" href="/images/appfavicon.png" />
+  <link rel="stylesheet" type="text/css" href="/css/app/style.css" />
+  <link rel="stylesheet" type="text/css" href="/icons/css/all.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="loader">
+    <svg viewBox="0 0 100 100">
+      <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+        <!-- left line -->
+        <path d="M 21 40 V 59">
+          <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 21 59; 180 21 59"
+            dur="2s" repeatCount="indefinite" />
+        </path>
+        <!-- right line -->
+        <path d="M 79 40 V 59">
+          <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 79 59; -180 79 59"
+            dur="2s" repeatCount="indefinite" />
+        </path>
+        <!-- top line -->
+        <path d="M 50 21 V 40">
+          <animate attributeName="d" values="M 50 21 V 40; M 50 59 V 40" dur="2s" repeatCount="indefinite" />
+        </path>
+        <!-- btm line -->
+        <path d="M 50 60 V 79">
+          <animate attributeName="d" values="M 50 60 V 79; M 50 98 V 79" dur="2s" repeatCount="indefinite" />
+        </path>
+        <!-- top box -->
+        <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
+          <animate attributeName="stroke" values="rgba(255,255,255,1); rgba(100,100,100,0)" dur="2s"
+            repeatCount="indefinite" />
+        </path>
+        <!-- mid box -->
+        <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z" />
+        <!-- btm box -->
+        <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
+          <animate attributeName="stroke" values="rgba(100,100,100,0); rgba(255,255,255,1)" dur="2s"
+            repeatCount="indefinite" />
+        </path>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0 0; 0 -19" dur="2s"
+          repeatCount="indefinite" />
+      </g>
+    </svg>
+  </div>
+
+  <header class="hidden">
+    <div class="image">
+      <i class="fa-solid fa-bars fa-xl" id="menu-icon" data-id="menu-icon"></i>
+    </div>
+    <div class="txt">
+      <h4><span>D</span>ashboard</h4>
+    </div>
+    <img src="/images/png/beta.png" class="profile-enabler" data-id="profile-enabler" />
+    <div class="user-info-basic js-user-info-basic hidden" data-id="user-info-basic">
+      <img class="profile-pic" src="/images/png/aave.png" />
+      <div>
+        <p class="username">John Doe</p>
+        <p class="usertype">Basic</p>
+        <a href="#" class="upgrade-button">
+          <p>Upgrade</p>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!--Navigation Bar-->
+
+  <section class="nav-section js-nav-section hidden" data-id="nav-section">
+    <i class="fa-light fa-xmark fa-2xl" id="menu-close-icon" data-id="menu-close-icon"></i>
+    <nav>
+      <a href="#">
+        <i class="fa-solid fa-gauge-high"></i>
+        <p>Dashboard</p>
+      </a>
+      <a href="#">
+        <i class="fa-regular fa-wallet"></i>
+        <p>Wallet</p>
+      </a>
+      <a href="#">
+        <i class="fa-regular fa-landmark-magnifying-glass"></i>
+        <p>Transaction History</p>
+      </a>
+      <a href="#">
+        <i class="fa-solid fa-paper-plane"></i>
+        <p>Plans</p>
+      </a>
+      <a href="#">
+        <i class="fa-solid fa-user-headset"></i>
+        <p>Contact</p>
+      </a>
+      <a href="#">
+        <i class="fa-solid fa-user-gear"></i>
+        <p>User settings</p>
+      </a>
+      <a href="auth/log-in.html">
+        <i class="fas fa-sign-out"></i>
+        <p>Log Out</p>
+      </a>
+      <a href="auth/lock-screen.html">
+        <i class="fas fa-lock"></i>
+        <p>Lock App</p>
+      </a>
+      <a href="#">
+        <i class="fa-solid fa-file-contract"></i>
+        <p>Terms And Conditions</p>
+      </a>
+    </nav>
+  </section>
+
+  <main class="hidden">
+    <i class="fa-solid fa-handshake fa-lg" id="welcome-icon"></i>
+    <h3>Welcome, <span class="username">username</span></h3>
+    <div class="all-coin-info" data-id="all-coin-info"></div>
+
+    <div class="invest-pop-container js-invest-pop-container hidden"></div>
+
+    <div class="mine-button-container">
+      <button class="coin-action-button mine-button js-mine-button">
+        Mine
+      </button>
+    </div>
+  </main>
+  <script src="/js/index.js" type="module"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
