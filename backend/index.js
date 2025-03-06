@@ -10,6 +10,7 @@ App.use(express.json());
 
 App.use(express.static(path.join(__dirname, "..", "frontend", "assets")));
 
+App.use("/*", express.static(path.join(__dirname, "..", "frontend", "assets")))
 App.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "frontend", "index.html"))
 })
@@ -25,7 +26,7 @@ App.get("/dashboard", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "frontend", "app", "index.html"))
 })
 
-App.get("/lock", (req, res) => {
+App.get("/secure", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "frontend", "app", "auth", "lock-screen.html"))
 })
 

@@ -36,31 +36,25 @@ const App = {
       App.$.navBar.classList.add("hidden");
     });
 
-    App.$.profileEnabler.addEventListener("click", () => {
-      App.$.userInfoBasic.classList.toggle("hidden");
+    App.$.profileEnabler.addEventListener("mouseenter", () => {
+      App.$.userInfoBasic.classList.remove("hidden");
     });
 
-    document.body.addEventListener("click", () => {
+    App.$.profileEnabler.addEventListener("mouseleave", () => {
+      App.$.userInfoBasic.classList.add("hidden");
+    });
+
+
+    document.querySelector(".popup-background").addEventListener("click", () => {
       if (
-        !App.$.userInfoBasic.classList.contains("hidden") &
+        !App.$.userInfoBasic.classList.contains("hidden") || 
         !App.$.navBar.classList.contains("hidden")
       ) {
         App.$.navBar.classList.add("hidden");
         App.$.userInfoBasic.classList.add("hidden");
         console.log("clicking");
       }
-    });
-
-    document.body.addEventListener("scroll", () => {
-      if (
-        !App.$.userInfoBasic.classList.contains("hidden") &
-        !App.$.navBar.classList.contains("hidden")
-      ) {
-        App.$.navBar.classList.add("hidden");
-        App.$.userInfoBasic.classList.add("hidden");
-        console.log("scrolling");
-      }
-    });
+    }); 
   },
 
   AddAllCoins() {
@@ -108,7 +102,14 @@ const App = {
         const coinShortName = investButton.dataset.shortname;
 
         const html = `
-
+              <div class="popup-background" style="
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                background-color: black;
+                opacity: 0.5;
+                z-index: -1;
+              "></div>
                 <div class="popup-close-icon-container">
                   <i class="fa-light fa-xmark fa-2xl" id="popup-close-icon" data-id="popup-close-icon"></i>
 
@@ -150,6 +151,13 @@ const App = {
                 `;
 
         document.querySelector(".js-invest-pop-container").innerHTML = html;
+
+        document.querySelector(".popup-background").addEventListener("click", () => {
+              document
+              .querySelector(".js-invest-pop-container")
+              .classList.add("hidden");
+
+        })
 
         document
           .querySelector('[data-id="popup-close-icon"]')

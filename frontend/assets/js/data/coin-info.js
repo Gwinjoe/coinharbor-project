@@ -1,7 +1,7 @@
 const coinInfo = [
   {
     id: "bitcoin-id",
-    image: "../assets/images/png/btc.png",
+    image: "/images/png/btc.png",
     name: "Bitcoin",
     nameshort: "BTC",
     quantity: 56784393,
@@ -14,7 +14,7 @@ const coinInfo = [
   },
   {
     id: "eth-id",
-    image: "../assets/images/png/eth.png",
+    image: "/images/png/eth.png",
     name: "Ethereum",
     nameshort: "ETH",
     quantity: 0.0,
@@ -27,7 +27,7 @@ const coinInfo = [
   },
   {
     id: "lit-id",
-    image: "../assets/images/png/ltc.png",
+    image: "/images/png/ltc.png",
     name: "Litecoin",
     nameshort: "LTC",
     quantity: 0.0,
@@ -40,7 +40,7 @@ const coinInfo = [
   },
   {
     id: "bnb-id",
-    image: "../assets/images/png/bnb.png",
+    image: "/images/png/bnb.png",
     name: "BNB Smart Chain (BEP4)",
     nameshort: "BNB",
     quantity: 0.0,
@@ -53,7 +53,7 @@ const coinInfo = [
   },
   {
     id: "usdtEth-id",
-    image: "../assets/images/png/usdt.png",
+    image: "/images/png/usdt.png",
     name: "USDT Ethereum",
     nameshort: "USDT eth",
     quantity: 0.0,
@@ -66,7 +66,7 @@ const coinInfo = [
   },
   {
     id: "usdtBnb-id",
-    image: "../assets/images/png/usdt.png",
+    image: "/images/png/usdt.png",
     name: "USDT BNB Smart Chain",
     nameshort: "USDT bnb",
     quantity: 0.0,
@@ -79,7 +79,7 @@ const coinInfo = [
   },
   {
     id: "sol-id",
-    image: "../assets/images/png/sol.png",
+    image: "/images/png/sol.png",
     name: "Solana (SOL)",
     nameshort: "SOL",
     quantity: 0.0,

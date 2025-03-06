@@ -109,7 +109,6 @@ body > button{
 
 html,
 body {
-  width: 100%;
   overflow-x: hidden;
   color: var(--color-white);
 }

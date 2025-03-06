@@ -220,6 +220,12 @@ a {
 
 /* Lists */
 
+.list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .list .list__item {
   line-height: 38px;
   cursor: pointer;
@@ -493,6 +499,7 @@ a {
   .header__top > nav {
     display: flex;
     align-items: center;
+    flex-wrap: no-wrap;
   }
 }
 
